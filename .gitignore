@@ -1,4 +1,6 @@
 app-env
+.env
 .vscode
 thoughts.md
 node_modules
+
