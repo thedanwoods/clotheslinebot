@@ -1,0 +1,38 @@
+{
+  "name": "clotheslinebot",
+  "version": "1.0.0",
+  "description": "Twitter bot to tell you if you should hang out your laundry",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "pretest": "eslint --ignore-path .gitignore .",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thedanwoods/clotheslinebot.git"
+  },
+  "author": "Dan Wood",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thedanwoods/clotheslinebot/issues"
+  },
+  "homepage": "https://github.com/thedanwoods/clotheslinebot#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "mocha": "^5.0.4"
+  },
+  "dependencies": {
+    "moment": "^2.22.1",
+    "moment-timezone": "^0.5.16",
+    "node-fetch": "^2.1.2",
+    "twitter": "^1.7.1"
+  }
+}
