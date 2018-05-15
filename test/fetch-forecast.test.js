@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 const assert = require('assert');
 
-const forecast = require('../src/fetch-forecast');
+const forecast = require('../lib/fetch-forecast');
 
 describe('metcheck', () => {
   it('should return an object with property ["metcheckData.forecastLocation.forecast"]', async () => {

@@ -2,7 +2,7 @@
 const assert = require('assert');
 const moment = require('moment');
 
-const opinion = require('../src/create-opinion');
+const opinion = require('../lib/create-opinion');
 const testForecastJson = require('./test-forecast.json');
 
 const testForecast = testForecastJson.metcheckData.forecastLocation.forecast;

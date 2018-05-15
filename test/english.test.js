@@ -1,6 +1,6 @@
 /* eslint-env mocha */
 const assert = require('assert');
-const english = require('../src/english');
+const english = require('../lib/english');
 
 describe('wet', () => {
   it('should return the right text if it is wet', () => {

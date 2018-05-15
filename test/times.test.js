@@ -2,7 +2,7 @@
 const assert = require('assert');
 const moment = require('moment');
 
-const times = require('../src/times');
+const times = require('../lib/times');
 
 describe('something', () => {
   it('should return something', () => {
