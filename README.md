@@ -1,5 +1,5 @@
 # clotheslinebot
-Twitter bot to tell you whether it's a good idea to put your washing on the line.
+Twitter bot to tell you whether it's a good idea to put your washing on the line. Follow at [@WashingLineLDN](https://twitter.com/WashingLineLDN)
 
 ## Why did you make this?
 I live in a flat with a terrible washer-dryer, so I put up a clothes line in the garden. I normally work in the daytime and can hang clothes up before leaving the house, but because I live in England, it's difficult to tell if they're going to get soaked.
