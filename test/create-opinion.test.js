@@ -354,5 +354,86 @@ describe('dry spells', () => {
       assert.strictEqual(result, expected);
     });
   });
+
+  it('should give sensible text instead of negative drying times', async () => {
+    const forecast = [{
+      utcTime: '2018-05-07T07:00:00.00',
+      rain: '0.00',
+      dryingTimeHeavy: '0hrs 21min',
+    },
+    {
+      utcTime: '2018-05-07T08:00:00.00',
+      rain: '0.00',
+      dryingTimeHeavy: '0hrs 21min',
+    },
+    {
+      utcTime: '2018-05-07T09:00:00.00',
+      rain: '0.00',
+      dryingTimeHeavy: '0hrs 21min',
+    },
+    {
+      utcTime: '2018-05-07T10:00:00.00',
+      rain: '0.00',
+      dryingTimeHeavy: '0hrs 21min',
+    },
+    {
+      utcTime: '2018-05-07T11:00:00.00',
+      rain: '0.00',
+      dryingTimeHeavy: '0hrs -1min',
+    },
+    {
+      utcTime: '2018-05-07T12:00:00.00',
+      rain: '0.00',
+      dryingTimeHeavy: '2hrs 23min',
+    },
+    {
+      utcTime: '2018-05-07T13:00:00.00',
+      rain: '0.00',
+      dryingTimeHeavy: '2hrs 20min',
+    },
+    {
+      utcTime: '2018-05-07T14:00:00.00',
+      rain: '0.00',
+      dryingTimeHeavy: '2hrs 25min',
+    },
+    {
+      utcTime: '2018-05-07T15:00:00.00',
+      rain: '0.00',
+      dryingTimeHeavy: '2hrs 26min',
+    },
+    {
+      utcTime: '2018-05-07T16:00:00.00',
+      rain: '0.00',
+      dryingTimeHeavy: '2hrs 26min',
+    },
+    {
+      utcTime: '2018-05-07T17:00:00.00',
+      rain: '0.00',
+      dryingTimeHeavy: '2hrs 26min',
+    },
+    {
+      utcTime: '2018-05-07T18:00:00.00',
+      rain: '0.00',
+      dryingTimeHeavy: '2hrs 26min',
+    },
+    {
+      utcTime: '2018-05-07T19:00:00.00',
+      rain: '0.00',
+      dryingTimeHeavy: '2hrs 26min',
+    }];
+
+    const periods = [{
+      period: 'DAY',
+      start: moment.utc('2018-05-07T07:00:00.00'),
+    }, {
+      period: 'NIGHT',
+      start: moment.utc('2018-05-07T19:00:00.00'),
+    }];
+
+    const expected = 'Hang your clothes out! Dry all day. Drying time at 12pm is less than half an hour. No rain tonight';
+
+    const result = await opinion.formTweet(forecast, periods);
+    assert.strictEqual(result, expected);
+  });
 });
 
